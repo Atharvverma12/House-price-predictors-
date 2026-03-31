@@ -13,6 +13,12 @@ data = {
                   355000, 475000, 195000, 405000, 275000, 555000, 130000, 445000, 215000, 535000]
 }
 
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, r2_score
+
 df = pd.DataFrame(data)
 
 X = df[['area', 'bedrooms', 'bathrooms', 'age', 'garage']]
